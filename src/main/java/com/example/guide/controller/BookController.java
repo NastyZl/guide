@@ -25,7 +25,7 @@ public class BookController {
 
     @GetMapping()
     public List<Book> getAllBook(@RequestParam(required = false) String author) {
-        if (author!=null){
+        if (author != null) {
             return bookService.findByAuthor(author);
         }
         return bookService.getAllBooks();
